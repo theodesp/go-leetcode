@@ -9,6 +9,7 @@ May the code be with you.
     - [x] : Trie Representation
     - [x] : Trie Operations
     - [x] : Map Sum
+    - [x] : ReplaceWords
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license

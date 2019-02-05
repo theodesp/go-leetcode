@@ -22,9 +22,9 @@ func TestTrie_Search(t *testing.T) {
 
 func TestTrie_StartsWith(t *testing.T) {
 	trie := Constructor()
-	trie.Insert("a")
+	trie.Insert("cattle")
 
-	if !trie.StartsWith("a") {
+	if !trie.StartsWith("cat") {
 		t.Fail()
 	}
 
