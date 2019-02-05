@@ -11,6 +11,7 @@ May the code be with you.
     - [x] : Map Sum
     - [x] : ReplaceWords
     - [x] : AddSearch
+    - [x] : FindMaximumXOR
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
