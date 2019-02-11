@@ -28,7 +28,7 @@ The input will only have lower-case letters.
 1 <= sentence words number <= 1000
 1 <= root length <= 100
 1 <= sentence words length <= 1000
- */
+*/
 
 func ReplaceWords(dict []string, sentence string) string {
 	words := strings.Split(sentence, " ")

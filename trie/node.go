@@ -7,7 +7,7 @@ type ArrayTrieNode struct {
 	children *[Cases]ArrayTrieNode
 }
 
-func NewArrayTrieNode() *ArrayTrieNode  {
+func NewArrayTrieNode() *ArrayTrieNode {
 	return &ArrayTrieNode{
 		children: &[Cases]ArrayTrieNode{},
 	}
@@ -18,7 +18,7 @@ type MapTrieNode struct {
 	children map[rune]MapTrieNode
 }
 
-func NewMapTrieNode() *MapTrieNode  {
+func NewMapTrieNode() *MapTrieNode {
 	return &MapTrieNode{
 		children: make(map[rune]MapTrieNode),
 	}

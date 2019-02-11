@@ -1,14 +1,14 @@
 package trie
 
 type Trie struct {
-	children map[rune]*Trie
+	children       map[rune]*Trie
 	isTerminalWord bool
 }
 
 /** Initialize your data structure here. */
 func Constructor() Trie {
 	return Trie{
-		children: make(map[rune]*Trie),
+		children:       make(map[rune]*Trie),
 		isTerminalWord: false,
 	}
 }
@@ -17,11 +17,11 @@ func Constructor() Trie {
 func (t *Trie) Insert(word string) {
 	curr := t
 	for _, ch := range word {
-		if _, ok := curr.children[rune(ch)]; !ok {
+		if _, ok := curr.children[ch]; !ok {
 			trie := Constructor()
-			curr.children[rune(ch)] = &trie
+			curr.children[ch] = &trie
 		}
-		curr = curr.children[rune(ch)]
+		curr = curr.children[ch]
 	}
 	curr.isTerminalWord = true
 }
@@ -30,10 +30,10 @@ func (t *Trie) Insert(word string) {
 func (t *Trie) Search(word string) bool {
 	curr := t
 	for _, ch := range word {
-		if _, ok := curr.children[rune(ch)]; !ok {
+		if _, ok := curr.children[ch]; !ok {
 			return false
 		}
-		curr = curr.children[rune(ch)]
+		curr = curr.children[ch]
 	}
 
 	return len(curr.children) == 0 || curr.isTerminalWord
@@ -43,10 +43,10 @@ func (t *Trie) Search(word string) bool {
 func (t *Trie) StartsWith(prefix string) bool {
 	curr := t
 	for _, ch := range prefix {
-		if _, ok := curr.children[rune(ch)]; !ok {
+		if _, ok := curr.children[ch]; !ok {
 			return false
 		}
-		curr = curr.children[rune(ch)]
+		curr = curr.children[ch]
 	}
 
 	return true

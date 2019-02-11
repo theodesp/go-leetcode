@@ -2,7 +2,7 @@ package trie
 
 import "testing"
 
-func TestWordDictionary_Search(t *testing.T)  {
+func TestWordDictionary_Search(t *testing.T) {
 	trie := DictConstructor()
 
 	trie.AddWord("bad")
@@ -32,6 +32,5 @@ func TestWordDictionary_Search(t *testing.T)  {
 	if trie.Search("b...") {
 		t.Fail()
 	}
-
 
 }

@@ -1,10 +1,10 @@
 package trie
 
 import (
-	"strconv"
-	"math"
 	"bytes"
 	"fmt"
+	"math"
+	"strconv"
 )
 
 /*
@@ -22,17 +22,17 @@ Input: [3, 10, 5, 25, 2, 8]
 Output: 28
 
 Explanation: The maximum result is 5 ^ 25 = 28.
- */
+*/
 
 type BinaryTrie struct {
-	children map[rune]*BinaryTrie
+	children       map[rune]*BinaryTrie
 	isTerminalWord bool
 }
 
 /** Initialize your data structure here. */
 func BConstructor() BinaryTrie {
 	return BinaryTrie{
-		children: make(map[rune]*BinaryTrie),
+		children:       make(map[rune]*BinaryTrie),
 		isTerminalWord: false,
 	}
 }
@@ -41,11 +41,11 @@ func BConstructor() BinaryTrie {
 func (t *BinaryTrie) Insert(word string) {
 	curr := t
 	for _, ch := range word {
-		if _, ok := curr.children[rune(ch)]; !ok {
+		if _, ok := curr.children[ch]; !ok {
 			trie := BConstructor()
-			curr.children[rune(ch)] = &trie
+			curr.children[ch] = &trie
 		}
-		curr = curr.children[rune(ch)]
+		curr = curr.children[ch]
 	}
 	curr.isTerminalWord = true
 }
@@ -54,10 +54,10 @@ func (t *BinaryTrie) Insert(word string) {
 func (t *BinaryTrie) Search(word string) bool {
 	curr := t
 	for _, ch := range word {
-		if _, ok := curr.children[rune(ch)]; !ok {
+		if _, ok := curr.children[ch]; !ok {
 			return false
 		}
-		curr = curr.children[rune(ch)]
+		curr = curr.children[ch]
 	}
 
 	return len(curr.children) == 0 || curr.isTerminalWord
@@ -74,9 +74,9 @@ func max(nums []int) int {
 	return max
 }
 
-func lpad(s string, pad string, plength int)string{
-	for i:=len(s);i<plength;i++{
-		s=pad+s
+func lpad(s string, pad string, plength int) string {
+	for i := len(s); i < plength; i++ {
+		s = pad + s
 	}
 	return s
 }
@@ -97,7 +97,7 @@ func FindMaximumXOR(nums []int) int {
 
 		curr := t
 		for _, ch := range num {
-			if rune(ch) == '0' {
+			if ch == '0' {
 				if _, ok := curr.children['1']; ok {
 					acc.WriteString("1")
 					curr = *curr.children['1']
@@ -109,7 +109,7 @@ func FindMaximumXOR(nums []int) int {
 					continue
 				}
 			}
-			if rune(ch) == '1' {
+			if ch == '1' {
 				if _, ok := curr.children['0']; ok {
 					acc.WriteString("1")
 					curr = *curr.children['0']

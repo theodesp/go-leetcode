@@ -19,17 +19,17 @@ search(".ad") -> true
 search("b..") -> true
 Note:
 You may assume that all words are consist of lowercase letters a-z.
- */
+*/
 
 type WordDictionary struct {
-	children map[rune]*WordDictionary
+	children       map[rune]*WordDictionary
 	isTerminalWord bool
 }
 
 /** Initialize your data structure here. */
 func DictConstructor() WordDictionary {
 	return WordDictionary{
-		children: make(map[rune]*WordDictionary),
+		children:       make(map[rune]*WordDictionary),
 		isTerminalWord: false,
 	}
 }
@@ -43,11 +43,11 @@ func (t *WordDictionary) AddWord(word string) {
 func (t *WordDictionary) Insert(word string) {
 	curr := t
 	for _, ch := range word {
-		if _, ok := curr.children[rune(ch)]; !ok {
+		if _, ok := curr.children[ch]; !ok {
 			trie := DictConstructor()
-			curr.children[rune(ch)] = &trie
+			curr.children[ch] = &trie
 		}
-		curr = curr.children[rune(ch)]
+		curr = curr.children[ch]
 	}
 
 	curr.isTerminalWord = true
@@ -58,7 +58,7 @@ A word could contain the dot character '.' to represent any one letter. */
 func (t *WordDictionary) Search(word string) bool {
 	curr := t
 	for i, ch := range word {
-		if rune(ch) == '.' {
+		if ch == '.' {
 			isMatched := false
 			for _, v := range curr.children {
 				if v.Search(word[i+1:]) {
@@ -66,10 +66,10 @@ func (t *WordDictionary) Search(word string) bool {
 				}
 			}
 			return isMatched
-		} else if _, ok := curr.children[rune(ch)]; !ok {
+		} else if _, ok := curr.children[ch]; !ok {
 			return false
 		}
-		curr = curr.children[rune(ch)]
+		curr = curr.children[ch]
 	}
 
 	return len(curr.children) == 0 || curr.isTerminalWord
