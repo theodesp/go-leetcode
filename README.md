@@ -1,3 +1,5 @@
+[![GolangCI](https://golangci.com/badges/github.com/golangci/golangci-lint.svg)](https://golangci.com/r/github.com/theodesp/go-leetcode)
+
 go-leetcode
 ---
 Solutions and implementations of Leetcode problems in Go.
