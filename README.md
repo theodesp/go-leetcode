@@ -7,7 +7,7 @@ May the code be with you.
 
 ## Challenges completed
 
-- [] **Tries**: [Link](https://leetcode.com/explore/learn/card/trie/150/introduction-to-trie/)
+- [x] **Tries**: [Link](https://leetcode.com/explore/learn/card/trie/150/introduction-to-trie/)
     - [x] : Trie Representation
     - [x] : Trie Operations
     - [x] : Map Sum
