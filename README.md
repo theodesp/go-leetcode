@@ -14,6 +14,7 @@ May the code be with you.
     - [x] : ReplaceWords
     - [x] : AddSearch
     - [x] : FindMaximumXOR
+    - [x] : WordSearch
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
