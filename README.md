@@ -15,6 +15,9 @@ May the code be with you.
     - [x] : AddSearch
     - [x] : FindMaximumXOR
     - [x] : WordSearch
+    
+- [] **Binary Search**: [Link](https://leetcode.com/explore/learn/card/binary-search/138/background/)
+    - [x] : Binary Search
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
