@@ -21,6 +21,7 @@ May the code be with you.
     - [x] : Sqrt
     - [x] : SearchRotated
     - [x] : FindPeakElement
+    - [x] : FindMinInRotatedArray
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
