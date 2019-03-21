@@ -20,6 +20,7 @@ May the code be with you.
     - [x] : Binary Search
     - [x] : Sqrt
     - [x] : SearchRotated
+    - [x] : FindPeakElement
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license

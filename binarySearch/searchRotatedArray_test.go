@@ -15,7 +15,7 @@ func TestRotatedSearch(t *testing.T)  {
 		t.Fail()
 	}
 
-	i := SearchRotated([]int{1, 3}, 3)
+	i = SearchRotated([]int{1, 3}, 3)
 	if i != 1 {
 		t.Fail()
 	}
