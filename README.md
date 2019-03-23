@@ -22,6 +22,7 @@ May the code be with you.
     - [x] : SearchRotated
     - [x] : FindPeakElement
     - [x] : FindMinInRotatedArray
+    - [x] : SearchRange
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
