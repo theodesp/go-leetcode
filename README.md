@@ -23,6 +23,7 @@ May the code be with you.
     - [x] : FindPeakElement
     - [x] : FindMinInRotatedArray
     - [x] : SearchRange
+    - [x] : Find K Closest Elements
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
