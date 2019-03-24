@@ -25,6 +25,7 @@ May the code be with you.
     - [x] : SearchRange
     - [x] : Find K Closest Elements
     - [x] : Pow
+    - [x] : IsPerfectSquare
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
