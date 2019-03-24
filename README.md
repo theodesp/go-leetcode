@@ -26,6 +26,7 @@ May the code be with you.
     - [x] : Find K Closest Elements
     - [x] : Pow
     - [x] : IsPerfectSquare
+    - [x] : NextGreatestLetter
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
