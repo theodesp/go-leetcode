@@ -28,6 +28,7 @@ May the code be with you.
     - [x] : IsPerfectSquare
     - [x] : NextGreatestLetter
     - [x] : FindMin
+    - [x] : ArrayIntersection
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license

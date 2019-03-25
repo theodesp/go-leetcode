@@ -8,16 +8,18 @@ func Search(nums []int, target int) int {
 	lo, hi := 0, len(nums)
 	for lo < hi {
 		m := int(uint(lo+hi) >> 1) // Written like this to avoid integer overflow.
-		if nums[m] < target {
+		if nums[m] == target {
+			return m
+		} else if nums[m] < target {
 			lo = m + 1
 		} else {
 			hi = m
 		}
 	}
 
-	if lo == len(nums) || nums[lo] != target {
-		return -1
-	} else {
+	if lo != len(nums) && nums[lo] == target {
 		return lo
 	}
+
+	return -1
 }
