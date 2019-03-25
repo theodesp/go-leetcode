@@ -29,6 +29,7 @@ May the code be with you.
     - [x] : NextGreatestLetter
     - [x] : FindMin
     - [x] : ArrayIntersection
+    - [x] : ArrayIntersection2
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
