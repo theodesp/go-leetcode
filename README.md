@@ -27,6 +27,7 @@ May the code be with you.
     - [x] : Pow
     - [x] : IsPerfectSquare
     - [x] : NextGreatestLetter
+    - [x] : FindMin
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
