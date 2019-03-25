@@ -30,6 +30,7 @@ May the code be with you.
     - [x] : FindMin
     - [x] : ArrayIntersection
     - [x] : ArrayIntersection2
+    - [x] : TwoSum
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
