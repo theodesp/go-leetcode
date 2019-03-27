@@ -31,6 +31,7 @@ May the code be with you.
     - [x] : ArrayIntersection
     - [x] : ArrayIntersection2
     - [x] : TwoSum
+    - [x] : FindDuplicateNumber
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license

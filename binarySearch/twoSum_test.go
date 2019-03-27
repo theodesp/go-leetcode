@@ -11,8 +11,8 @@ func TestTwoSum(t *testing.T)  {
 		t.Fatalf("TwoSum: got %v", i)
 	}
 
-	i = TwoSum([]int{2,3,4}, 6)
-	if !reflect.DeepEqual(i, []int{1,3}) {
+	i = TwoSum([]int{3,2,4}, 6)
+	if !reflect.DeepEqual(i, []int{1,2}) {
 		t.Fatalf("TwoSum: got %v", i)
 	}
 }
