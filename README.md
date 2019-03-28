@@ -32,6 +32,7 @@ May the code be with you.
     - [x] : ArrayIntersection2
     - [x] : TwoSum
     - [x] : FindDuplicateNumber
+    - [x] : FindMedianSortedArrays
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
