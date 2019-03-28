@@ -33,6 +33,7 @@ May the code be with you.
     - [x] : TwoSum
     - [x] : FindDuplicateNumber
     - [x] : FindMedianSortedArrays
+    - [x] : Find K-th Smallest Pair Distance
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
