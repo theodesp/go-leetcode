@@ -34,6 +34,7 @@ May the code be with you.
     - [x] : FindDuplicateNumber
     - [x] : FindMedianSortedArrays
     - [x] : Find K-th Smallest Pair Distance
+    - [x] : Split Array Largest Sum
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
