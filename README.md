@@ -16,7 +16,7 @@ May the code be with you.
     - [x] : FindMaximumXOR
     - [x] : WordSearch
     
-- [] **Binary Search**: [Link](https://leetcode.com/explore/learn/card/binary-search/138/background/)
+- [x] **Binary Search**: [Link](https://leetcode.com/explore/learn/card/binary-search/138/background/)
     - [x] : Binary Search
     - [x] : Sqrt
     - [x] : SearchRotated
@@ -35,6 +35,9 @@ May the code be with you.
     - [x] : FindMedianSortedArrays
     - [x] : Find K-th Smallest Pair Distance
     - [x] : Split Array Largest Sum
+    
+- [] **List**:
+    - [x] : Reverse a Linked List
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
