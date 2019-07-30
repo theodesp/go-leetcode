@@ -38,6 +38,9 @@ May the code be with you.
     
 - [] **List**:
     - [x] : Reverse a Linked List
+    
+- [] **Uncategorized**:
+    - [x] : Add two numbers
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
