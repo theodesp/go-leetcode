@@ -43,6 +43,8 @@ May the code be with you.
     - [x] : Add two numbers
     - [x] : Length Of Longest Substring
     - [x] : Defanging an IP Address
+    - [x] : Defanging an IP Address
+    - [x] : First Unique Character in a String
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
