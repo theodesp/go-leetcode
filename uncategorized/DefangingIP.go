@@ -26,5 +26,5 @@ Constraints:
 The given address is a valid IPv4 address.
  */
 func defangIPaddr(address string) string {
-	return strings.ReplaceAll(address, ".","[.]")
+	return strings.Replace(address, ".","[.]", -1)
 }

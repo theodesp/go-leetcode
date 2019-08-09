@@ -26,6 +26,7 @@ func firstUniqChar(s string) int {
 		} else {
 			lookup[char] = 1
 		}
+
 	}
 	for pos, char := range s {
 		if lookup[char] == 1 {
