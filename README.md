@@ -47,6 +47,7 @@ May the code be with you.
     - [x] : First Unique Character in a String
     - [x] : Longest prefix which is also suffix
     - [x] : Best time to buy and sell stock
+    - [x] : Add binary
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
