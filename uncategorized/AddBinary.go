@@ -23,6 +23,9 @@ Output: "10101"
  While we haven't reached the start of a and b
  Check if a(l1)
  If curry == 1 then prepend 1 in result
+
+ Time Complexity: O(max(len(a),len(b)) = O(n)
+ Space Complexity: O(max(len(a),len(b)) = O(n)
   */
 func AddBinary(a string, b string) string {
 	res := ""
