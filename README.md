@@ -48,6 +48,7 @@ May the code be with you.
     - [x] : Best time to buy and sell stock - With explanation
     - [x] : Add binary - With explanation
     - [x] : Two Sum - With explanation
+    - [x] : Valid Palindrome
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
