@@ -43,11 +43,11 @@ May the code be with you.
     - [x] : Add two numbers
     - [x] : Length Of Longest Substring
     - [x] : Defanging an IP Address
-    - [x] : Defanging an IP Address
     - [x] : First Unique Character in a String
     - [x] : Longest prefix which is also suffix
     - [x] : Best time to buy and sell stock - With explanation
     - [x] : Add binary - With explanation
+    - [x] : Two Sum - With explanation
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license

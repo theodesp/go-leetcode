@@ -6,5 +6,5 @@ import (
 )
 
 func main()  {
-	fmt.Println(uncategorized.AddBinary("1010", "1011"))
+	fmt.Println(uncategorized.TwoSum([]int{3,2,4}, 6))
 }

@@ -9,8 +9,6 @@ Given a valid (IPv4) IP address, return a defanged version of that IP address.
 
 A defanged IP address replaces every period "." with "[.]".
 
-
-
 Example 1:
 
 Input: address = "1.1.1.1"
@@ -25,6 +23,10 @@ Constraints:
 
 The given address is a valid IPv4 address.
  */
+
+ /*
+ Solution: Use string replace to change '.' with '[.]'
+  */
 func defangIPaddr(address string) string {
 	return strings.Replace(address, ".","[.]", -1)
 }
