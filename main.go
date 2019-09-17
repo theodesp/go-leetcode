@@ -6,7 +6,5 @@ import (
 )
 
 func main()  {
-	//fmt.Println(uncategorized.ValidPalindrome("abca"))
-	fmt.Println(uncategorized.ValidPalindrome("eccer"))
-	fmt.Println(uncategorized.ValidPalindrome("abc"))
+	fmt.Println(uncategorized.SubarraySum([]int{1,1,1}, 2))
 }

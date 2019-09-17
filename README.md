@@ -49,6 +49,7 @@ May the code be with you.
     - [x] : Add binary - With explanation
     - [x] : Two Sum - With explanation
     - [x] : Valid Palindrome
+    - [x] : Subarray Sum Equals K
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
