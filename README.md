@@ -38,6 +38,7 @@ May the code be with you.
     
 - [] **List**:
     - [x] : Reverse a Linked List
+    - [x] : Find Middle Element
     
 - [] **Tree**:
     - [x] : Reverse a Binary Tree
