@@ -39,6 +39,9 @@ May the code be with you.
 - [] **List**:
     - [x] : Reverse a Linked List
     
+- [] **Tree**:
+    - [x] : Reverse a Binary Tree
+    
 - [] **Uncategorized**:
     - [x] : Add two numbers
     - [x] : Length Of Longest Substring
