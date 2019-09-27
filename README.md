@@ -41,6 +41,7 @@ May the code be with you.
     - [x] : Find Middle Element
     - [x] : Remove Duplicates from Unsorted/Sorted List
     - [x] : Linked List Implementation
+    - [x] : Double Linked List Implementation
     
 - [] **Stack**:
     - [x] : Implement Stack using Queue
