@@ -36,6 +36,10 @@ func (s S)IsEmpty()bool  {
 	return len(s.items) == 0
 }
 
+func (s *S)Empty()  {
+	s.items = []int{}
+}
+
 type MyQueue struct {
 	stack *S
 	first int
@@ -43,8 +47,8 @@ type MyQueue struct {
 
 
 /** Initialize your data structure here. */
-func Constructor() MyQueue {
-	return MyQueue{
+func Constructor() *MyQueue {
+	return &MyQueue{
 		stack: &S{},
 		first: -1,
 	}

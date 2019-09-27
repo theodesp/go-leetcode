@@ -44,6 +44,7 @@ May the code be with you.
     
 - [] **Stack**:
     - [x] : Implement Stack using Queue
+    - [x] : Sort Stack using temp stack
     
 - [] **Queue**:
     - [x] : Implement Queue using Stack

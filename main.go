@@ -2,13 +2,15 @@ package main
 
 import (
 	"fmt"
-	queue2 "github.com/theodesp/go-leetcode/queue"
+	"github.com/theodesp/go-leetcode/stack"
 )
 
 func main()  {
-	queue := queue2.Constructor()
-	queue.Push(1)
-	queue.Push(2)
-	fmt.Println(queue.Pop())   // returns 1
-	queue.Empty()
+	s := stack.NewSortableStack()
+	s.Push(4)
+	s.Push(3)
+	s.Push(6)
+	s.Push(9)
+	s.Push(1)
+	fmt.Println(s.Sort())
 }
