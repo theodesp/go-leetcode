@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/list"
+	queue2 "github.com/theodesp/go-leetcode/queue"
 )
 
 func main()  {
-	l := list.Constructor()
-	l.AddAtHead(1)
-	l.AddAtTail(3)
-	l.AddAtIndex(1,2)
-	l.DeleteAtIndex(1)
-	fmt.Println(l.Get(-3))
+	queue := queue2.Constructor()
+	queue.Push(1)
+	queue.Push(2)
+	fmt.Println(queue.Pop())   // returns 1
+	queue.Empty()
 }

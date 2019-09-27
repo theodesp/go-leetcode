@@ -44,6 +44,9 @@ May the code be with you.
     
 - [] **Stack**:
     - [x] : Implement Stack using Queue
+    
+- [] **Queue**:
+    - [x] : Implement Queue using Stack
      
 - [] **Tree**:
     - [x] : Reverse a Binary Tree
