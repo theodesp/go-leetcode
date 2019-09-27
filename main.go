@@ -2,9 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/uncategorized"
+	"github.com/theodesp/go-leetcode/list"
 )
 
 func main()  {
-	fmt.Println(uncategorized.SubarraySum([]int{1,1,1}, 2))
+	l := list.Constructor()
+	l.AddAtHead(1)
+	l.AddAtTail(3)
+	l.AddAtIndex(1,2)
+	l.DeleteAtIndex(1)
+	fmt.Println(l.Get(-3))
 }

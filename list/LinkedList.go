@@ -30,11 +30,12 @@ func (l *LinkedList)AddNode(data int) *LinkedListNode {
 
 type MyLinkedList struct {
 	Head *LinkedListNode
+	Size int
 }
 
 /** Initialize your data structure here. */
 func Constructor() MyLinkedList {
-	return MyLinkedList{}
+	return MyLinkedList{Size:0}
 }
 
 
@@ -47,6 +48,7 @@ func (l *MyLinkedList) AddAtHead(val int)  {
 	node.next = l.Head
 	// Set current head as new node
 	l.Head = node
+	l.Size += 1
 }
 
 
@@ -66,6 +68,7 @@ func (l *MyLinkedList) AddAtTail(val int)  {
 		// Change the next of last node
 		curr.next = node
 	}
+	l.Size += 1
 }
 
 
@@ -74,35 +77,79 @@ If index equals to the length of linked list,
 the node will be appended to the end of linked list.
 If index is greater than the length, the node will not be inserted. */
 func (l *MyLinkedList) AddAtIndex(index int, val int)  {
+	if index > l.Size {
+		return
+	}
+	if index < 0 {
+		l.AddAtHead(val)
+		return
+	}
 	// Allocate new node
 	node := &LinkedListNode{data: val}
 	// If the Linked List is empty, then make the new node as head
-	if l.Head == nil && index == 0 {
+	if l.Head == nil {
 		l.Head = node
-	} else {
-		count := 0
-		// Else traverse till the last node
-		curr := l.Head
-		for curr.next != nil && count < index {
-			curr = curr.next
-			count += 1
-		}
-		if count == index {
-
-		}
-		// Change the next of last node
-		curr.next = node
+		l.Size += 1
 	}
+	if index == 0 {
+		next := l.Head.next
+		l.Head = node
+		node.next = next
+		l.Size += 1
+	} else {
+		// Else traverse till the given index node
+		curr := l.Head
+		var prev *LinkedListNode
+		for i:=0;i<index && curr != nil;i+=1{
+			prev = curr
+			curr = curr.next
+		}
+		node.next = prev.next
+		prev.next = node
+	}
+	l.Size += 1
 }
 
+/** Delete the index-th node in the linked list, if the index is valid. */
+func (l *MyLinkedList) DeleteAtIndex(index int)  {
+	if index > l.Size || l.Size == 0 {
+		return
+	}
+	if index == 0 {
+		l.Head = l.Head.next
+		l.Size-=1
+	}
+	curr := l.Head
+	for i:=0;i<index-1 && curr != nil;i+=1{
+		curr = curr.next
+	}
 
-///** Delete the index-th node in the linked list, if the index is valid. */
-//func (l *MyLinkedList) DeleteAtIndex(index int)  {
-//
-//}
-//
-///** Get the value of the index-th node in the linked list.
-//If the index is invalid, return -1. */
-//func (l *MyLinkedList) Get(index int) int {
-//
-//}
+	// If position is more than number of nodes
+	if curr == nil || curr.next == nil {
+		return
+	}
+
+	// Node curr.next is the node to be deleted
+	next := curr.next.next
+	curr.next = next
+	l.Size-=1
+}
+
+/** Get the value of the index-th node in the linked list.
+If the index is invalid, return -1. */
+func (l *MyLinkedList) Get(index int) int {
+	if index > l.Size || l.Head == nil || index < 0 {
+		return -1
+	}
+	if index == 0 {
+		return l.Head.data
+	}
+	curr := l.Head
+	for i:=0;i<index && curr != nil;i+=1 {
+		curr = curr.next
+	}
+	if curr == nil {
+		return -1
+	}
+	return curr.data
+}
