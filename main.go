@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/list"
+	"github.com/theodesp/go-leetcode/array"
 )
 
 func main()  {
-	d:=list.NewDList()
-	d.PushHead(1)
-	d.PushHead(2)
-	d.PushTail(3)
-	fmt.Println(d)
+	arrs := [][]int{
+		[]int{1,2,3},
+		[]int{1,2,3,4},
+		[]int{1,2},
+	}
+	fmt.Println(array.FindCommonElementsKSortedArrays(arrs))
 }

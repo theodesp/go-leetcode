@@ -43,6 +43,9 @@ May the code be with you.
     - [x] : Linked List Implementation
     - [x] : Double Linked List Implementation
     
+- [] **Array**:
+    - [x] : Find common elements in K sorted arrays
+    
 - [] **Stack**:
     - [x] : Implement Stack using Queue
     - [x] : Sort Stack using temp stack
