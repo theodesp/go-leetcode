@@ -6,5 +6,5 @@ import (
 )
 
 func main()  {
-	fmt.Println(array.Permute([]int{1,2,3}))
+	fmt.Println(array.FindKthLargest([]int{99,99},1))
 }

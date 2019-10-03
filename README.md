@@ -47,6 +47,7 @@ May the code be with you.
     - [x] : Find common elements in K sorted arrays
     - [x] : Pascals Triangle
     - [x] : Array permutations
+    - [x] : Find kth largest/smallest element in unsorted list
     
 - [] **Stack**:
     - [x] : Implement Stack using Queue
