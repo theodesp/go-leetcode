@@ -46,6 +46,7 @@ May the code be with you.
 - [] **Array**:
     - [x] : Find common elements in K sorted arrays
     - [x] : Pascals Triangle
+    - [x] : Array permutations
     
 - [] **Stack**:
     - [x] : Implement Stack using Queue

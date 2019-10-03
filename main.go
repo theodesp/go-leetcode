@@ -6,5 +6,5 @@ import (
 )
 
 func main()  {
-	fmt.Println(array.GeneratePascal(6))
+	fmt.Println(array.Permute([]int{1,2,3}))
 }

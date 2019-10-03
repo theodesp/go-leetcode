@@ -6,7 +6,8 @@ package array
  */
 /* Solution
  We notice that the i,j row is calculated by taking the sum of the upper left and
-upper right cell.
+upper right cell. So create each cell by adding the above and above left cell.
+If the cell is the first or last we put 1.
  */
 func GeneratePascal(numRows int) [][]int {
 	result := [][]int{}
