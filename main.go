@@ -6,10 +6,5 @@ import (
 )
 
 func main()  {
-	arrs := [][]int{
-		[]int{1,2,3},
-		[]int{1,2,3,4},
-		[]int{1,2},
-	}
-	fmt.Println(array.FindCommonElementsKSortedArrays(arrs))
+	fmt.Println(array.GeneratePascal(6))
 }
