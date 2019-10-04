@@ -66,6 +66,7 @@ May the code be with you.
     - [x] : Inorder Traversal
     - [x] : Postorder Traversal
     - [x] : Levelorder Traversal
+    - [x] : Binary Search String Delete
 
 - [] **Hash Table**:
     - [x] : Hash table Implementation
