@@ -1,5 +1,7 @@
 package trees
 
+import "math"
+
 /*
 Binary Search Tree Implementation
 */
@@ -103,6 +105,27 @@ func (b BinarySearchTree) search(node *BinarySearchTreeNode, value int) *BinaryS
 		return node
 	}
 }
+
+func (b *BinarySearchTree) LowestCommonAncestor(x,y int) *BinarySearchTreeNode  {
+	return b.lowestCommonAncestor(b.Root, x,y)
+}
+
+func (b *BinarySearchTree) lowestCommonAncestor(node *BinarySearchTreeNode, x, y int) *BinarySearchTreeNode  {
+	if node == nil {
+		return nil
+	}
+	if math.Max(float64(x), float64(y)) < float64(node.value) {
+		// If max of x and y is less than node value then LCA is located left of node
+		return b.lowestCommonAncestor(node.Left, x, y)
+	} else if math.Min(float64(x), float64(y)) > float64(node.value) {
+		// If min of x and y is more than node value then LCA is located right of node
+		return b.lowestCommonAncestor(node.Right, x, y)
+	} else {
+		// Otherwise this node is the LCA
+		return node
+	}
+}
+
 
 func (b *BinarySearchTree) Delete(value int) *BinarySearchTreeNode  {
 	return b.delete(b.Root, value)

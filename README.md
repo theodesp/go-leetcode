@@ -68,6 +68,7 @@ May the code be with you.
     - [x] : Levelorder Traversal
     - [x] : Binary Search Tree Delete
     - [x] : Binary Search Tree Search
+    - [x] : Binary Search Tree Lowest Common Ancestor
 
 - [] **Hash Table**:
     - [x] : Hash table Implementation
