@@ -58,6 +58,9 @@ May the code be with you.
      
 - [] **Tree**:
     - [x] : Reverse a Binary Tree
+
+- [] **Hash Table**:
+    - [x] : Hash table Implementation
     
 - [] **Uncategorized**:
     - [x] : Add two numbers
