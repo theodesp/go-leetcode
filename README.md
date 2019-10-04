@@ -62,6 +62,7 @@ May the code be with you.
      
 - [] **Tree**:
     - [x] : Reverse a Binary Tree
+    - [x] : Preorder Traversal
 
 - [] **Hash Table**:
     - [x] : Hash table Implementation

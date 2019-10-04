@@ -2,18 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/caching"
+	"github.com/theodesp/go-leetcode/trees"
 )
 
 func main()  {
-	l := caching.NewLRUCache(2)
-	l.Set(1,1)
-	l.Set(2,2)
-	fmt.Println(l.Get(1))
-	l.Set(3,3)
-	fmt.Println(l.Get(2))
-	l.Set(4,4)
-	fmt.Println(l.Get(1))
-	fmt.Println(l.Get(3))
-	fmt.Println(l.Get(4))
+	bt := trees.NewBinaryTree()
+	bt.Root = trees.NewBinaryTreeNode(42)
+	bt.Root.Left = trees.NewBinaryTreeNode(41)
+	bt.Root.Right = trees.NewBinaryTreeNode(50)
+	bt.Root.Left.Left = trees.NewBinaryTreeNode(10)
+	bt.Root.Left.Right = trees.NewBinaryTreeNode(40)
+	bt.Root.Right.Left = trees.NewBinaryTreeNode(45)
+	bt.Root.Right.Right = trees.NewBinaryTreeNode(75)
+	bt.TraversePreorder(func(value interface{}) {
+		fmt.Println(value)
+	})
 }
