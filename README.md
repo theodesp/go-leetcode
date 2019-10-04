@@ -58,6 +58,7 @@ May the code be with you.
 
 - [] **Cache**:
     - [x] : Implement LFU Cache using Double List
+    - [x] : Implement LRU Cache using Double List
      
 - [] **Tree**:
     - [x] : Reverse a Binary Tree

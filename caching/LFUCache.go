@@ -155,7 +155,7 @@ func (cache *LFUCache)Put(key int, value int) {
 			// Capacity reached
 			// delete from minFreq and insert
 			oldTail := cache.freq[cache.minFreq].RemoveAtTail()
-			cache.keys[oldTail.key] = nil
+			delete(cache.keys, oldTail.key)
 			// Create a new frequency list for the new count if not exists
 			if cache.freq[1] == nil {
 				cache.freq[1] = NewLFUList()
@@ -163,7 +163,7 @@ func (cache *LFUCache)Put(key int, value int) {
 			// Add the node to the new freq map
 			cache.freq[1].InsertHead(node)
 		}
-		// Reset minFreq for the new element
+		// Reset minFreq to 1 for the new element
 		cache.minFreq = 1
 	} else {
 		// Cache hit. Increase freq counter of the current element and update minFreq
