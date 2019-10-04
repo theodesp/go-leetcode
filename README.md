@@ -64,6 +64,7 @@ May the code be with you.
     - [x] : Reverse a Binary Tree
     - [x] : Preorder Traversal
     - [x] : Inorder Traversal
+    - [x] : Postorder Traversal
 
 - [] **Hash Table**:
     - [x] : Hash table Implementation
