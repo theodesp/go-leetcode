@@ -55,6 +55,9 @@ May the code be with you.
     
 - [] **Queue**:
     - [x] : Implement Queue using Stack
+
+- [] **Cache**:
+    - [x] : Implement LFU Cache using Double List
      
 - [] **Tree**:
     - [x] : Reverse a Binary Tree

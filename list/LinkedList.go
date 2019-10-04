@@ -120,6 +120,7 @@ func (l *MyLinkedList) DeleteAtIndex(index int)  {
 		l.Size-=1
 	}
 	curr := l.Head
+	// Traverse until previous node. So curr.next in the node to be deleted
 	for i:=0;i<index-1 && curr != nil;i+=1{
 		curr = curr.next
 	}
@@ -153,3 +154,19 @@ func (l *MyLinkedList) Get(index int) int {
 	}
 	return curr.data
 }
+
+/** Find out whether a value exists in a singly linked list */
+func (l *MyLinkedList) Exists(value int) bool {
+	if l.Head == nil {
+		return false
+	}
+	curr := l.Head
+	for curr.next != nil {
+		if curr.data == value {
+			return true
+		}
+		curr = curr.next
+	}
+	return false
+}
+

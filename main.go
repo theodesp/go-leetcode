@@ -2,17 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/hashTable"
+	"github.com/theodesp/go-leetcode/caching"
 )
 
 func main()  {
-	ht := hashTable.NewHashTable(10)
-	ht.PutDoubleHash(7, "h1")
-	ht.PutDoubleHash(20, "hello")
-	ht.PutDoubleHash(33, "sunny")
-	ht.PutDoubleHash(46, "weather")
-	ht.PutDoubleHash(59, "wow")
-	ht.PutDoubleHash(72, "forty")
-
-	fmt.Println(ht)
+	l := caching.NewLFUCache(5)
+	l.Put(1,1)
+	l.Put(2,2)
+	l.Put(3,3)
+	l.Put(4,4)
+	l.Put(5,5)
+	fmt.Println(l.Get(1))
+	fmt.Println(l.Get(1))
+	fmt.Println(l.Get(1))
+	l.Put(6,6)
+	fmt.Println(l.Get(6))
 }

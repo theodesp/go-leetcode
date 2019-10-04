@@ -14,13 +14,13 @@ func deleteDuplicates(head *ListNode) *ListNode {
 		return head
 	}
 	seen := make(map[int]interface{})
-	prev := head
-	for prev.Next != nil {
-		if _, ok := seen[prev.Val]; ok {
-			prev.Next = prev.Next.Next
+	curr := head
+	for curr.Next != nil {
+		if _, ok := seen[curr.Val]; ok {
+			curr.Next = curr.Next.Next
 		} else {
-			seen[prev.Val] = struct {}{}
-			prev = prev.Next
+			seen[curr.Val] = struct {}{}
+			curr = curr.Next
 		}
 	}
 	return head
