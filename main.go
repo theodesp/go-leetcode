@@ -14,7 +14,7 @@ func main()  {
 	bt.Root.Left.Right = trees.NewBinaryTreeNode(40)
 	bt.Root.Right.Left = trees.NewBinaryTreeNode(45)
 	bt.Root.Right.Right = trees.NewBinaryTreeNode(75)
-	bt.TraversePreorder(func(value interface{}) {
+	bt.TraverseLevelorder(func(value []int) {
 		fmt.Println(value)
 	})
 }

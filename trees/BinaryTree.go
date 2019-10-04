@@ -143,3 +143,41 @@ func (bt *BinaryTree)TraversePostorderIter(cb func(value interface{})) {
 		cb(node.value)
 	}
 }
+
+type NodeLevel struct {
+	Node *BinaryTreeNode
+	Level int
+}
+
+// Traverse recursively
+func (bt *BinaryTree)TraverseLevelorder() [][]int {
+	result := [][]int{}
+	level := 0
+	// Use a queue as FIFO access
+	queue := []NodeLevel{}
+
+	if bt.Root == nil {
+		return result
+	}
+
+	queue = append(queue, NodeLevel{Node:bt.Root, Level:level})
+	result = append(result, []int{})
+	for len(queue) > 0 {
+		// Grab first element
+		curr, rest := queue[0], queue[1:]
+		queue = rest
+		if len(result)-1 < curr.Level {
+			result = append(result, []int{})
+		}
+		result[curr.Level] = append(result[curr.Level], curr.Node.value.(int))
+		// Push left and right children into the queue
+		if curr.Node.Left != nil {
+			queue = append(queue, NodeLevel{Node:curr.Node.Left, Level:curr.Level+1})
+		}
+		if curr.Node.Right != nil {
+			queue = append(queue, NodeLevel{Node:curr.Node.Right, Level:curr.Level+1})
+		}
+	}
+
+	return result
+}

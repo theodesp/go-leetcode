@@ -65,6 +65,7 @@ May the code be with you.
     - [x] : Preorder Traversal
     - [x] : Inorder Traversal
     - [x] : Postorder Traversal
+    - [x] : Levelorder Traversal
 
 - [] **Hash Table**:
     - [x] : Hash table Implementation
