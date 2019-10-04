@@ -53,3 +53,60 @@ func Preorder(node *BinaryTreeNode, cb func(value interface{}))  {
 	Preorder(node.Left, cb)
 	Preorder(node.Right, cb)
 }
+
+// Traverse recursively
+func (bt *BinaryTree)TraverseInorder(cb func(value interface{}))  {
+	Inorder(bt.Root, cb)
+}
+
+func Inorder(node *BinaryTreeNode, cb func(value interface{}))  {
+	if node == nil {
+		return
+	}
+	Preorder(node.Left, cb)
+	cb(node.value)
+	Preorder(node.Right, cb)
+}
+
+// Traverse iterate
+func (bt *BinaryTree)TraverseInorderIter(cb func(value interface{}))  {
+	// Start at root
+	curr := bt.Root
+	stack := []*BinaryTreeNode{}
+	done := false
+	for !done {
+		if curr != nil {
+			// push root into stack
+			stack = append(stack, curr)
+			// Traverse left until we have no left trees left
+			curr = curr.Left
+		} else {
+			// As long as we have elements in the stack
+			if len(stack) > 0 {
+				// Pop the last stack element pushed.
+				node := stack[len(stack)-1]
+				stack = stack[:len(stack)-1]
+				// Inorder callback
+				cb(node.value)
+				// Traverse Right now
+				node = node.Right
+			} else {
+				done = true
+			}
+		}
+	}
+}
+
+// Traverse recursively
+func (bt *BinaryTree)TraversePostorder(cb func(value interface{}))  {
+	Postorder(bt.Root, cb)
+}
+
+func Postorder(node *BinaryTreeNode, cb func(value interface{}))  {
+	if node == nil {
+		return
+	}
+	Preorder(node.Left, cb)
+	Preorder(node.Right, cb)
+	cb(node.value)
+}
