@@ -2,19 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/trees"
+	"github.com/theodesp/go-leetcode/binarySearch"
 )
 
 func main()  {
-	bt := trees.NewBinaryTree()
-	bt.Root = trees.NewBinaryTreeNode(42)
-	bt.Root.Left = trees.NewBinaryTreeNode(41)
-	bt.Root.Right = trees.NewBinaryTreeNode(50)
-	bt.Root.Left.Left = trees.NewBinaryTreeNode(10)
-	bt.Root.Left.Right = trees.NewBinaryTreeNode(40)
-	bt.Root.Right.Left = trees.NewBinaryTreeNode(45)
-	bt.Root.Right.Right = trees.NewBinaryTreeNode(75)
-	bt.TraverseLevelorder(func(value []int) {
-		fmt.Println(value)
-	})
+	arr := [][]int{
+		[]int{10, 8, 10, 10},
+		[]int{14, 13, 12, 11},
+		[]int{15, 9, 11, 21},
+		[]int{16, 17, 19, 20},
+	}
+
+	fmt.Println(binarySearch.FindPeakElement2d(arr))
 }

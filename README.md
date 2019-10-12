@@ -35,6 +35,7 @@ May the code be with you.
     - [x] : FindMedianSortedArrays
     - [x] : Find K-th Smallest Pair Distance
     - [x] : Split Array Largest Sum
+    - [x] : Find Peak Element 2d
     
 - [] **List**:
     - [x] : Reverse a Linked List
