@@ -74,6 +74,9 @@ May the code be with you.
 - [] **Hash Table**:
     - [x] : Hash table Implementation
     
+- [] **Sortin**:
+    - [x] : Counting Sort
+    
 - [] **Uncategorized**:
     - [x] : Add two numbers
     - [x] : Length Of Longest Substring
