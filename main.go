@@ -6,5 +6,5 @@ import (
 )
 
 func main()  {
-	fmt.Println(sorting.CountingSort([]int{1, 4, 1, 2, 7, 5, 2}))
+	fmt.Println(sorting.RadixSort([]int{1, 4, 1, 2, 7, 5, 2}))
 }

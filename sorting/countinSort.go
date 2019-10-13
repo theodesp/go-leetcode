@@ -9,7 +9,7 @@ each object in the output sequence.
  */
 
 func CountingSort(arr []int) []int  {
-	// Find lengt of result array
+	// Find length of result array
 	min, max := findMinMax(arr)
 	r := max - min + 1
 	count := make([]int, r,r)

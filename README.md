@@ -74,8 +74,9 @@ May the code be with you.
 - [] **Hash Table**:
     - [x] : Hash table Implementation
     
-- [] **Sortin**:
+- [] **Sorting**:
     - [x] : Counting Sort
+    - [x] : Radix Sort
     
 - [] **Uncategorized**:
     - [x] : Add two numbers
