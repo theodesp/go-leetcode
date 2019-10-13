@@ -72,6 +72,7 @@ May the code be with you.
     - [x] : Binary Search Tree Lowest Common Ancestor
     - [x] : Binary Search Tree Print nodes K distance from root
     - [x] : Binary Search Tree Subtree of Another Tree
+    - [x] : Binary Search Tree Trees are mirror
 
 - [] **Hash Table**:
     - [x] : Hash table Implementation
