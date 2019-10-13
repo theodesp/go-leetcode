@@ -1,6 +1,9 @@
 package trees
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 /*
 Binary Search Tree Implementation
@@ -25,6 +28,23 @@ type BinarySearchTree struct {
 
 func NewBinarySearchTree() *BinarySearchTree {
 	return &BinarySearchTree{Root: nil}
+}
+
+func (b *BinarySearchTree) InsertRecur(value int) {
+	b.Root = insertRecur(b.Root, value)
+}
+
+func insertRecur(node *BinarySearchTreeNode, value int) *BinarySearchTreeNode {
+	// If the tree is empty, return a new node
+	if node == nil {
+		return NewBinarySearchTreeNode(value)
+	}
+	if value < node.value {
+		node.Left = insertRecur(node.Left, value)
+	} else if value > node.value {
+		node.Right = insertRecur(node.Right, value)
+	}
+	return node
 }
 
 func (b *BinarySearchTree) Insert(value int)  {
@@ -174,4 +194,24 @@ func findMin(root *BinarySearchTreeNode) *BinarySearchTreeNode {
 		root = root.Left
 	}
 	return root
+}
+
+/*
+Given a root of a tree, and an integer k.
+Print all the nodes which are at k distance from root.
+
+Solution: Pass the k parameter on each children when we traverse down we subtract one.
+If k == 0 then we print the node value
+ */
+func PrintNodesKDistanceRoot(node *BinarySearchTreeNode, k int)  {
+	if node == nil {
+		return
+	}
+	if k == 0 {
+		fmt.Println(node.value)
+		return
+	} else {
+		PrintNodesKDistanceRoot(node.Right, k-1)
+		PrintNodesKDistanceRoot(node.Left, k-1)
+	}
 }

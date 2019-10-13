@@ -70,6 +70,7 @@ May the code be with you.
     - [x] : Binary Search Tree Delete
     - [x] : Binary Search Tree Search
     - [x] : Binary Search Tree Lowest Common Ancestor
+    - [x] : Binary Search Tree Print nodes K distance from root
 
 - [] **Hash Table**:
     - [x] : Hash table Implementation

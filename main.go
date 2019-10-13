@@ -1,10 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"github.com/theodesp/go-leetcode/sorting"
+	"github.com/theodesp/go-leetcode/trees"
 )
 
 func main()  {
-	fmt.Println(sorting.RadixSort([]int{1, 4, 1, 2, 7, 5, 2}))
+	t := trees.NewBinarySearchTree()
+	t.InsertRecur(1)
+	t.InsertRecur(3)
+	t.InsertRecur(2)
+	t.InsertRecur(4)
+	t.InsertRecur(5)
+	t.InsertRecur(8)
+	t.InsertRecur(9)
+	trees.PrintNodesKDistanceRoot(t.Root, 2)
 }
