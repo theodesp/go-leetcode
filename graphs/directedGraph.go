@@ -32,3 +32,24 @@ func (g *DirectedGraph)RemoveVertex(v int)  {
 	// Finally remove vertex itself
 	delete(g.edges, v)
 }
+
+// Time Complexity: O(V + E)
+func (g *DirectedGraph)TraverseBFS(v int, cb func(v int)) {
+	queue := []int{v}
+	seen := make(map[int]bool)
+
+	// while the queue is not empty
+	for len(queue) > 0 {
+		vertex, rest := queue[0], queue[1:]
+		queue = rest
+		// if we haven't seen that vertex
+		if _, ok := seen[vertex];!ok {
+			seen[vertex] = true
+			cb(vertex)
+			for key, _ := range g.edges[v] {
+				// Push the edges to the queue
+				queue = append(queue, key)
+			}
+		}
+	}
+}
