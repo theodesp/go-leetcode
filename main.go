@@ -1,17 +1,14 @@
 package main
 
 import (
-	"github.com/theodesp/go-leetcode/trees"
+	"github.com/theodesp/go-leetcode/heap"
 )
 
 func main()  {
-	t := trees.NewBinarySearchTree()
-	t.InsertRecur(1)
-	t.InsertRecur(3)
-	t.InsertRecur(2)
-	t.InsertRecur(4)
-	t.InsertRecur(5)
-	t.InsertRecur(8)
-	t.InsertRecur(9)
-	trees.PrintNodesKDistanceRoot(t.Root, 2)
+	h := heap.Heap{}
+	h.Add(1)
+	h.Add(10)
+	h.Add(5)
+	h.Add(100)
+	h.Add(8)
 }

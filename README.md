@@ -50,12 +50,15 @@ May the code be with you.
     - [x] : Array permutations
     - [x] : Find kth largest/smallest element in unsorted list
     
-- [] **Stack**:
+- [x] **Stack**:
     - [x] : Implement Stack using Queue
     - [x] : Sort Stack using temp stack
     
-- [] **Queue**:
+- [x] **Queue**:
     - [x] : Implement Queue using Stack
+
+- [x] **Heap**:
+    - [x] : Implement a MinHeap
 
 - [] **Cache**:
     - [x] : Implement LFU Cache using Double List
