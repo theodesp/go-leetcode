@@ -17,7 +17,7 @@ func main() {
 	g.AddEdge(1,5,1)
 	g.AddEdge(3,4,1)
 	g.AddEdge(4,5,1)
-	g.TraverseBFS(1, func(v int) {
+	g.TraverseDFS(1, func(v int) {
 		fmt.Println(v)
 	})
 }

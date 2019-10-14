@@ -63,6 +63,8 @@ May the code be with you.
 - [x] **Graph**:
     - [x] : Implement an UndirectedGraph
     - [x] : Implement an DirectedGraph
+    - [x] : BFS
+    - [x] : DFS
 
 - [] **Cache**:
     - [x] : Implement LFU Cache using Double List

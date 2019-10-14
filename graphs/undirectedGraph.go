@@ -48,6 +48,22 @@ func (g *UndirectedGraph)RemoveEdge(v1, v2 int)  {
 }
 
 // Time Complexity: O(V + E)
+func (g *UndirectedGraph)TraverseDFS(v int, cb func(v int))  {
+	seen := make(map[int]bool)
+	traverseDFS(g, v, cb, seen)
+}
+
+func traverseDFS(g *UndirectedGraph, v int, cb func(v int), visited map[int]bool)  {
+	visited[v] = true
+	cb(v)
+	for _, val := range g.edges[v] {
+		if _, ok := visited[val]; !ok {
+			traverseDFS(g, val, cb, visited)
+		}
+	}
+}
+
+// Time Complexity: O(V + E)
 func (g *UndirectedGraph)TraverseBFS(v int, cb func(v int)) {
 	queue := []int{v}
 	seen := make(map[int]bool)
