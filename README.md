@@ -49,6 +49,7 @@ May the code be with you.
     - [x] : Pascals Triangle
     - [x] : Array permutations
     - [x] : Find kth largest/smallest element in unsorted list
+    - [x] : K-th Element of Two Sorted Arrays
     
 - [x] **Stack**:
     - [x] : Implement Stack using Queue

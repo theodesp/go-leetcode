@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/uncategorized"
+	"github.com/theodesp/go-leetcode/array"
 )
 
 func main() {
@@ -21,5 +21,5 @@ func main() {
 	//	fmt.Println(v)
 	//})
 	//a := []int{9, 11, 12, 13, 2,4, 17}
-	fmt.Println(uncategorized.CanFormPalindrome("geeksogeeks"))
+	fmt.Println(array.FindKthElementTwoSortedArrays([]int{2, 3, 6, 7, 9}, []int{1, 4, 8, 10}, 5))
 }
