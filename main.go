@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/theodesp/go-leetcode/sorting"
+	"github.com/theodesp/go-leetcode/uncategorized"
 )
 
 func main() {
@@ -20,6 +20,6 @@ func main() {
 	//g.TraverseDFS(1, func(v int) {
 	//	fmt.Println(v)
 	//})
-	a := []int{9, 11, 12, 13, 2,4, 17}
-	fmt.Println(sorting.MergeSort(a))
+	//a := []int{9, 11, 12, 13, 2,4, 17}
+	fmt.Println(uncategorized.CanFormPalindrome("geeksogeeks"))
 }

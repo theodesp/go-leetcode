@@ -102,6 +102,7 @@ May the code be with you.
     - [x] : Two Sum - With explanation
     - [x] : Valid Palindrome
     - [x] : Subarray Sum Equals K
+    - [x] : Check string chars can be rearranged to form palindrome
 
 ## LICENCE
 Copyright © 2019 Theo Despoudis MIT license
