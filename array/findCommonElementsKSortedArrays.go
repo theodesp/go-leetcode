@@ -1,7 +1,7 @@
 package array
 
 /**
-Find all common elements in K arrays
+Find all common elements in K sorted arrays
 for example
 1 var arr1 = [1, 5, 5, 10];
 2 var arr2 = [3, 4, 5, 5, 10];

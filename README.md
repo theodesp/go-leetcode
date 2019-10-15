@@ -89,6 +89,7 @@ May the code be with you.
 - [] **Sorting**:
     - [x] : Counting Sort
     - [x] : Radix Sort
+    - [x] : Merge Sort
     
 - [] **Uncategorized**:
     - [x] : Add two numbers
