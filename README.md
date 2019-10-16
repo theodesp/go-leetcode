@@ -60,6 +60,9 @@ May the code be with you.
 
 - [x] **Heap**:
     - [x] : Implement a MinHeap
+
+- [x] **Searching**:
+    - [x] : Rabin-Karp Searching
     
 - [x] **Graph**:
     - [x] : Implement an UndirectedGraph

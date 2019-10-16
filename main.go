@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt"
-	"github.com/theodesp/go-leetcode/array"
+	"github.com/theodesp/go-leetcode/searching"
 )
 
 func main() {
@@ -21,5 +20,5 @@ func main() {
 	//	fmt.Println(v)
 	//})
 	//a := []int{9, 11, 12, 13, 2,4, 17}
-	fmt.Println(array.FindKthElementTwoSortedArrays([]int{2, 3, 6, 7, 9}, []int{1, 4, 8, 10}, 5))
+	searching.RabinKarpSearch("AABAACAADAABAABA", "AABA")
 }
