@@ -1,25 +1,28 @@
 package graphs
 
 type DirectedGraph struct {
-	edges map[int]map[int]int
+	edges map[int][]int
 }
 
 func NewDirectedGraph() *DirectedGraph {
-	return &DirectedGraph{edges: make(map[int]map[int]int)}
+	return &DirectedGraph{edges: make(map[int][]int)}
 }
 
 func (g *DirectedGraph) AddVertex(v int)  {
-	g.edges[v] = make(map[int]int)
+	g.edges[v] = []int{}
 }
 
 func (g *DirectedGraph)AddEdge(v1, v2, w int)  {
-	g.edges[v1][v2] =  w
+	g.edges[v1] = append(g.edges[v1], v2)
 }
 
 func (g *DirectedGraph)RemoveEdge(v1, v2 int)  {
-	if _, okV1 := g.edges[v1];okV1 {
-		if _, okV2 := g.edges[v1][v2];okV2 {
-			delete(g.edges[v1], v2)
+	if _, ok := g.edges[v1];ok {
+		if _, ok := g.edges[v1];ok {
+			i := indexOf(g.edges[v1], v2)
+			if i != - 1 {
+				g.edges[v1] = append(g.edges[v1][:i], g.edges[v1][i:]...)
+			}
 		}
 	}
 }
@@ -52,4 +55,25 @@ func (g *DirectedGraph)TraverseBFS(v int, cb func(v int)) {
 			}
 		}
 	}
+}
+
+func (g *DirectedGraph)TopologicalSort() []string {
+	seen := make(map[int]bool)
+	stack := []string{}
+	for key, _ := range g.edges {
+		if _, ok := seen[key]; !ok {
+			g.TopologicalSortUntil(key, seen, &stack)
+		}
+	}
+	return stack
+}
+
+func (g *DirectedGraph)TopologicalSortUntil(v int, seen map[int]bool, stack *[]string) {
+	seen[v] = true
+	for _, val := range g.edges[v] {
+		if _, ok := seen[val]; !ok {
+			g.TopologicalSortUntil(val, seen, stack)
+		}
+	}
+	*stack = append([]string{string(v)}, *stack...)
 }

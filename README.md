@@ -69,8 +69,9 @@ May the code be with you.
     - [x] : Implement an DirectedGraph
     - [x] : BFS
     - [x] : DFS
+    - [x] : Topological sort
 
-- [] **Cache**:
+- [x] **Cache**:
     - [x] : Implement LFU Cache using Double List
     - [x] : Implement LRU Cache using Double List
      
