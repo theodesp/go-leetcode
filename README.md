@@ -88,13 +88,17 @@ May the code be with you.
     - [x] : Binary Search Tree Subtree of Another Tree
     - [x] : Binary Search Tree Trees are mirror
 
-- [] **Hash Table**:
+- [x] **Hash Table**:
     - [x] : Hash table Implementation
     
-- [] **Sorting**:
+- [x] **Sorting**:
     - [x] : Counting Sort
     - [x] : Radix Sort
     - [x] : Merge Sort
+ 
+- [x] **Dynamic Programming**:
+    - [x] : Fibonacci Dynamic
+    - [x] : Knapsack
     
 - [] **Uncategorized**:
     - [x] : Add two numbers

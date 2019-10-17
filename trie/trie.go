@@ -23,6 +23,7 @@ func (t *Trie) Insert(word string) {
 		}
 		curr = curr.Children[ch]
 	}
+	// Set terminal word
 	curr.isTerminalWord = true
 }
 
