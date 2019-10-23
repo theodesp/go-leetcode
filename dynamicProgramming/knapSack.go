@@ -45,6 +45,42 @@ func KnapSack(w, n int, wt []int, vals[]int) int  {
 	return int(math.Max(float64(maxIncluded), float64(maxNotIncluded)))
 }
 
+func KnapSackMemo(w, n int, wt []int, vals[]int) int {
+	memo := make(map[int]map[int]int, w)
+	for i := 0;i<=w;i+=1 {
+		memo[i] = make(map[int]int, n)
+	}
+
+	return knapSackMemo(w,n,wt,vals,memo)
+}
+
+func knapSackMemo(w, n int, wt []int, vals[]int, memo map[int]map[int]int) int {
+	if n == 0 || w == 0 {
+		return 0
+	}
+
+	if w < wt[n-1] {
+		if val, ok := memo[w][n-1]; ok {
+			return val
+		}
+		memo[w][n-1] = knapSackMemo(w,n-1,wt,vals, memo)
+		return memo[w][n-1]
+	}
+
+	if _, ok := memo[w][n-1]; !ok {
+		memo[w][n-1] = knapSackMemo(w,n-1,wt,vals, memo)
+	}
+
+	if _, ok := memo[w-wt[n-1]][n-1]; !ok {
+		memo[w-wt[n-1]][n-1] = knapSackMemo(w-wt[n-1],n-1,wt,vals, memo)
+	}
+
+	maxIncluded := vals[n-1] + memo[w-wt[n-1]][n-1]
+	maxNotIncluded := memo[w][n-1]
+
+	return int(math.Max(float64(maxIncluded), float64(maxNotIncluded)))
+}
+
 
 // Same problem using DP tabulation
 func KnapSackDP(w, n int, wt []int, vals[]int) int  {
